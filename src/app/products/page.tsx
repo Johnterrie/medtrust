@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const products = [
@@ -39,7 +40,7 @@ export default function ecoms() {
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
         {products.map((product) => (
           <div key={product.id} className="bg-white p-4 shadow-md rounded-md">
-            <img src={product.image} alt={product.name} className="w-full h-48 object-cover rounded-md" />
+            <Image src={product.image} alt={product.name} className="w-full h-48 object-cover rounded-md" />
             <h3 className="text-lg font-medium mt-2">{product.name}</h3>
             <p className="text-gray-500">{product.price}</p>
             <button className="mt-2 px-4 py-2 bg-black text-white rounded-md w-full">Buy Now</button>
